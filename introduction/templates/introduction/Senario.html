@@ -1,0 +1,36 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+
+{% block title %}
+    Game Senario
+{% endblock %}
+
+{% block content %}
+<body onload="pageLoading()">
+    <br>
+<div style="font-size: 22px;">
+   Please imagine yourself in the following situation:
+<br>
+You are an Interior Designer and you have to furnish an empty living room for a client.
+<br>
+The client is a famous archeologist and he likes classy, antique and rare designs. He hates seeing his belongings in other peoples houses and wants to own unique items. Quality and price are the next priorities for him.
+<br>
+If the purchased items match the criteria above, they will have a higher perceived value for him and he will like them.
+<br>
+There will be music playing in the background. Please make sure to have you audio on. You can interact with the volume in the browser (bottom left) but please don't change the volume or turn off the music using your computer.
+
+
+</div>
+<br>
+    {% next_button %}
+
+</body>
+
+    <script>
+        function pageLoading() {
+            document.getElementsByClassName("debug-info")[0].style.visibility = "hidden";
+        }
+    </script>
+
+
+{% endblock %}

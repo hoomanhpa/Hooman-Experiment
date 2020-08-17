@@ -1,0 +1,343 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+
+
+{% block title %}
+
+{% endblock %}
+
+{% block content %}
+
+
+<body onload="onPageLoad()">
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <nav class="navbar fixed-top navbar-light bg-light">
+        <span id="productname" class="navbar-brand" href="#"></span>
+        <a class="my-2 my-lg-0">
+            <!-- Button trigger modal -->
+            <button id="skipButton" type="button" class="btn btn-success" 
+                onclick="skipProduct()">
+                Skip page
+            </button>
+        </a>
+    </nav>
+
+
+    <div style="position:relative; left:0; margin-right:10px; margin-left: 10px;; ">
+        <div id="productTable" class="row">
+        </div>
+    </div>
+
+
+    <br>
+    <div style="visibility: hidden;">
+        {% next_button %}
+    </div>
+    <br>
+    <br>
+
+    <!-- formfield for each product choice -->
+    <div id="hidden_inputfields">
+    </div>
+
+    <input type="hidden" name="musicPlayed" id="musicPlayed" />
+    <input type="hidden" name="paymentplayer" id="paymentplayer" />
+    <input type="hidden" name="sumofprices" id="sumofprices" />
+
+    <!-- input field for voulme -->
+    <input type="hidden" name="volume_button_clicked" id="volume_button_clicked" />
+
+    <!-- play Music -->
+    <audio id="music"  style="visibility: hidden;" loop>
+        <source type="audio/mpeg">
+    </audio>
+     
+    <nav class="navbar fixed-bottom navbar-light bg-light">
+        <button onclick="Set_vol1()" type="button"> 
+            Set Half Volume 
+        </button> 
+          
+        <button onclick="Set_vol2()" type="button"> 
+            Set Full Volume  
+        </button><br>  
+
+        <button id="shoppingListButton" type="button" class="btn btn-primary" data-toggle="modal" data-target="#ListDialog" style="visibility: hidden;"
+                onclick="openListDialog()">
+    </button>
+        <b>Time remaining in seconds:</b>
+         <div style="font-weight: bold ;font-size: 24px; color: red;" id="timerOutput"></div>
+           
+        </a>
+    </nav> 
+      
+    <script> 
+        var gfg = document.getElementById("music"); 
+        
+                    
+        function Set_vol1() {  
+            var was_clicked = document.getElementById("volume_button_clicked");
+           
+            gfg.volume = 0.4; 
+
+            if(was_clicked.value.length == 0) {
+         
+                was_clicked.value = "true";
+               
+            }
+           
+            
+        }  
+          
+        function Set_vol2() {  
+            var was_clicked = document.getElementById("volume_button_clicked");
+            gfg.volume = 1.0; 
+            if(was_clicked.value.length == 0) {
+                
+                was_clicked.value = "true";
+                
+            }
+        }  
+    </script>
+
+    <!-- <button id="nextButton" onclick="fillTable()">Next</button>-->
+
+    {% include "./BasketDialog.html" %}
+
+    {% include "./ProductInformationDialog.html" %}
+
+    {% include "./ListDialog.html" %}
+
+
+</body>
+
+<script>
+
+    var round = js_vars.round_current;
+    var musicList = js_vars.musicList;
+    var enterPageTime;
+
+    //shopping lists random sequence, random sequence of products
+    var shoppingLists = js_vars.shopList;
+    var currentList = js_vars.round_current-1;
+    var currentProduct = 0;
+    const TIME_PER_PAGE = 90;
+    var timeRemaining = TIME_PER_PAGE;
+
+    function onPageLoad() {
+        //TODO: Check this is only called once for the entire session
+        /* for(i = 0; i < shoppingLists.length; i++) {
+            shoppingLists[i].sort(function(a, b) {
+            return Math.random() - 0.5;
+            });
+        } */
+
+        currentProduct = 0;
+        document.getElementsByClassName("debug-info")[0].style.visibility = "hidden";
+        createInputFields();
+        fillTable();
+        window.setInterval(timerEvent, 1000);
+    }
+
+    function timerEvent() {
+        timeRemaining--;
+        if (timeRemaining <= 0) {
+            skipProduct();
+        }
+        document.getElementById("timerOutput").innerHTML = timeRemaining;
+    }
+
+
+    function playMusic() {
+        var mp3 = musicList[currentList]["src"];
+        document.getElementById("musicPlayed").value = mp3;
+        var sourcePath = `{% static '/imagesShop/Music/${mp3}' %}`;
+        var music = document.getElementById("music");
+        music.src = sourcePath;
+        music.play();
+    }
+
+
+    function createInputFields() {
+        var shoppingLists = js_vars.shopList;
+        var inputfields = document.getElementById('hidden_inputfields');
+
+        for(i = 0; i < 8; i++) {
+            inputfields.innerHTML += `<input type="hidden" id="time_choice${i}" name="time_choice${i}" />`;
+            for(x = 0; x < 8; x++) {
+                id = "choice" + i + x;
+                inputfields.innerHTML += `<input type="hidden" id="${id}" name="${id}" />`;
+                document.getElementById(id).value += `"name": "${shoppingLists[currentList][i]["products"][x]["title"]}" ,`;
+            }
+        }  
+
+
+
+       console.log( document.getElementById('hidden_inputfields'));
+    }
+
+    function fillTable() {       
+        //wenn add button clicked, sende nicht mit next, sondern erst beim letzten mal, und dann klicke auf fill tabel für neues, und setzte cunt erhöt
+        enterPageTime = new Date();
+        var arrayLength = 8;
+        document.getElementById("productname").innerHTML = shoppingLists[currentList][currentProduct]["name"];
+        productTable.innerHTML = "";
+        
+        for (i = 0; i < arrayLength; i++) {
+            start = new Date();
+            image = shoppingLists[currentList][currentProduct]["products"][i]["image"];
+            title = shoppingLists[currentList][currentProduct]["products"][i]["title"];
+            price = shoppingLists[currentList][currentProduct]["products"][i]["price"];
+
+            productTable.innerHTML += `
+                                    <div style="margin-bottom: 12px" class="col-md-3">
+                                        <div class="card" style="width: 13rem; height: auto">
+                                                <img src="{% static '${image}' %}" class="card-img-top" alt="..." />
+                                                <div class="card-body">
+                                                <h5 class="card-title">
+                                                    ${title}
+                                                </h5>
+                                                <p>${price} €</p>
+                                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#InformationDialog" onclick="showProductInformation(${i})">
+                                                    Info
+                                                </button>
+                                                &nbsp;
+                                                <button type="button" class="btn btn-danger" onclick="addToBasket(${i})"">
+                                                    Add
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                     `;
+        }
+
+        //display next_button if its an impulsive/optional product
+        var optionalProduct = shoppingLists[currentList][currentProduct]["type"];
+        if(optionalProduct == "mandatory") {
+            document.getElementById("skipButton").style.visibility = "hidden";
+        } else {
+            document.getElementById("skipButton").style.visibility = "";
+        }
+
+
+        //show new shoppingLIst
+        //show shopping list, by closing pop up, music starts to play
+        //users confirm is neccesary to play music due to restructions made by the browser (chrome, firefox, safari) -> other option: set in browser settings: 
+        if(currentProduct == 0) {
+            var showShoppingList = document.getElementById('shoppingListButton').click();
+            //document.getElementById("music").play();
+        }
+        //count products
+        currentProduct += 1;
+
+        if(currentProduct == 5) {
+            alert("You have purchased all of the items on the shopping list. The rest of the products are optional. You can either buy them or skip the page using the green button.");
+        }
+        
+    }
+
+    function skipProduct() {
+        //Reset timer
+        timeRemaining = TIME_PER_PAGE;
+        //if all 8 products were displayed -> click otree-next button to send formfields
+        if(currentProduct === 8) {
+            document.querySelector("button[class='otree-btn-next btn btn-primary']").click();
+        } else {
+            fillTable();
+        }
+    }
+
+    function addToBasket(i) {
+        //Update timer
+        timeRemaining = TIME_PER_PAGE;
+        document.getElementById("timerOutput").innerHTML = timeRemaining;
+
+        var fieldName = "choice" + (currentProduct-1) + i;
+        var productvariant = document.getElementById(fieldName);
+        productvariant.value += '"added": "true"';
+
+        var duration = enterPageTime - new Date();
+        var productField = "time_choice" + (currentProduct-1);
+        var timeOnPage = document.getElementById(productField);
+        timeOnPage.value = duration;
+        var quality = shoppingLists[currentList][currentProduct-1]["products"][i]["qualityPoints"];
+        var prices = shoppingLists[currentList][currentProduct-1]["products"][i]["price"];
+
+        
+
+        var new_sumprice = 0;
+        
+        if(document.getElementById("sumofprices").value.length == 0) {
+            new_sumprice = parseInt(prices);
+            alert(parseInt(prices));
+        } else {
+            var oldie =  document.getElementById("sumofprices").value;
+            new_sumprice = parseInt(oldie) + parseInt(prices);
+            alert(new_sumprice);
+        }
+        document.getElementById("sumofprices").value = new_sumprice;
+
+
+        var new_payment = 0.0;
+
+        if(document.getElementById("paymentplayer").value.length == 0) {
+            new_payment = parseFloat(quality);
+        
+        } else {
+            var old =  document.getElementById("paymentplayer").value;
+            new_payment = parseFloat(old) + parseFloat(quality);
+        }
+
+      
+        document.getElementById("paymentplayer").value = new_payment;
+      
+        if(currentProduct === 8) {
+            document.querySelector("button[class='otree-btn-next btn btn-primary']").click();
+        }
+       
+
+        fillTable();
+        //with selection of a product you can't go back, its is automatically added to your basket, also important to measure the time
+        //document.querySelector("button[class='otree-btn-next btn btn-primary']").click();
+    }
+
+    function showProductInformation(i) {
+        //start counting time 
+        var entryDate = new Date();
+        var fieldName = "choice" + (currentProduct-1) +  i;
+        var description = document.getElementById('description');
+        var title = document.getElementById('title');
+        var price = document.getElementById('priceInformationDialog');
+        var quality = document.getElementById('qualityInformationDialog');
+        document.getElementById("closeInfoDialogButton").onclick = closeInfoDialog(fieldName, entryDate);
+        title.innerHTML = shoppingLists[currentList][currentProduct-1]["products"][i]["title"];
+        description.innerHTML = shoppingLists[currentList][currentProduct-1]["products"][i]["description"];
+        price.innerHTML = shoppingLists[currentList][currentProduct-1]["products"][i]["price"] + "€";
+        //quality.innerHTML = shoppingLists[currentList][currentProduct-1]["products"][i]["qualityPoints"];
+    }
+
+    function closeInfoDialog(fieldName, entryDate) {
+        var closeDate = new Date();
+        var duration = closeDate - entryDate;
+        var product = document.getElementById(fieldName);
+        var data = js_vars.fieldName;
+        data += `"info_duation": "${duration}", "infoButton_clicked": "true",`;
+        product.value = data;
+    }
+
+    function openListDialog() {
+        var table = document.getElementById('products_list');
+        for (i = 0; i < 8; i++) {
+            if(shoppingLists[currentList][i]["type"] == "mandatory") {
+                table.innerHTML += `<li>${shoppingLists[currentList][i]["name"]}</li>
+            `
+            }
+        }
+    }
+
+
+</script>
+
+{% endblock %}

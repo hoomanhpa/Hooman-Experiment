@@ -1,0 +1,71 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+
+{% block title %}
+   
+{% endblock %}
+
+{% block content %}
+
+   {{ form.errors }}
+
+    <body onload="hideDebug()" style="position:fixed;">
+
+        <nav class="navbar fixed-top navbar-light bg-light">
+            <span id="productname" class="navbar-brand" href="#">Welche Option (A,B,C,D) passt zur Vorlage?</span>
+            <a class="my-2 my-lg-0">
+                <!-- Button trigger modal -->
+                <button id="skipButton" type="button" class="btn btn-success" 
+                    onclick="next()">
+                    Next
+                </button>
+            </a>
+        </nav>
+    
+        <br>
+        <div style="margin-left: 50%;">
+            <div style="height: 200px;">
+                <img id="cognitiveTestImg" onload="loadImage()" style="margin-left:20%;" src="{% static '/imagesShop/PaperFoldingCutting/image1.png' %}"/>
+            </div>
+            <br><br>
+            <div style="margin-left: 10px;">
+                <tr>
+                    {% for choice in form.cognition %}
+                        <td>{{ choice }}</td>
+                        <span style="margin-left: 100px;"></span>
+                    {% endfor %}
+                </tr>
+            </div>
+        </div>
+    </body>
+
+   <div style="visibility: hidden;">{% next_button %}</div>
+
+    <script>
+
+        function loadImage() {
+            var round = js_vars.round_current;
+            var cognitiveTestImg = document.getElementById("cognitiveTestImg");
+            var img = `{% static '/imagesShop/PaperFoldingCutting/image${round}.png' %}`;
+            cognitiveTestImg.src = img;
+        }
+
+        function hideDebug() {
+            document.getElementsByClassName("debug-info")[0].style.visibility = "hidden";
+        } 
+
+        function next() {
+            document.querySelector("button[class='otree-btn-next btn btn-primary']").click();
+        }
+           
+    </script>
+
+    </script>
+
+{% endblock %}
+
+
+
+
+
+

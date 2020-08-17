@@ -1,0 +1,35 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+
+{% block title %}
+    The Shopping Task
+{% endblock %}
+
+{% block content %}
+
+<body onload="pageLoading()">
+    <div style="font-size: 22px;">
+        You have to decorate an empty living room.
+        <br>
+You have a shopping list with 4 items. All items on the shopping list have to be purchased: Sofa, Table, Lamp and a TV set. 
+<br>
+There are 8 options for each item. You can read their description and then choose one. 
+<br>
+The maximum browsing time on each page is 90 seconds. If you run out of time, the page will be skipped to the next item and you lose your chance to buy one of the items and increasing your payout. The remaining time is shown in the bottom right (after the start of the experiment).
+<br>
+During the experiment, you will first encounter the 4 items, which are on the shopping list and have to be purchased. After that you will land on 4 more pages, that include further optional items to decorate the living room with. You can either buy them or skip the page, using the button on the top right.
+
+        </div>
+        <br>
+        <img style="margin-left:1%; margin-top: 2px;border: solid;margin-bottom: 2%;" src="{% static '/imagesShop/intro/introduction.png' %}"/>
+        <br>
+            {% next_button %}
+        
+</body>
+    <script>
+        function pageLoading() {
+            document.getElementsByClassName("debug-info")[0].style.visibility = "hidden";
+        }
+    </script>
+
+{% endblock %}

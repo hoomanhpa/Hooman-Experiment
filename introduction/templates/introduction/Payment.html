@@ -1,0 +1,42 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+
+{% block title %}
+    Payment
+{% endblock %}
+
+{% block content %}
+
+<div style="font-size: 22px;" onload="pageLoading()">
+The maximum amount of payout equals 6 €.
+The client compares his perceived value of the item with the actual price. So higher price doesn‘t necessarily mean better payout. 
+If the client likes the design and the product has a higher perceived value for him than the actual price, you receive a better payment. The logic is explained below:
+<br>
+For items on the shppoing list:
+<br>
+If perceived value by customer is higher than the actual price, you get 1 €. 
+<br>
+If perceived value by customer is equal to the actual price, you get 0.5 €. 
+<br>
+If perceived value by customer is lower than the actual price, you get 0 €. 
+<br>
+For items, which are not on the shopping list: 
+<br>
+If perceived value by customer is higher than the actual price, you get 0.5 €. 
+<br>
+If perceived value by customer is equal to the actual price, you get 0 €. 
+<br>
+If perceived value by customer is lower than the actual price, you get -0.5 €. 
+
+</div>
+<br>
+    {% next_button %}
+
+    <script>
+        function pageLoading() {
+            document.getElementsByClassName("debug-info")[0].style.visibility = "hidden";
+        }
+    </script>
+
+
+{% endblock %}

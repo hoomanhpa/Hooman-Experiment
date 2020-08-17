@@ -1,0 +1,581 @@
+[
+    [ 
+        {
+            "name": "TV",
+            "type": "mandatory",
+            "products": [
+              {
+                "name": "TV1",
+                "title": "Brand 1",
+                "price": 639,
+                "image": "imagesShop/list1/TV/21.jpg",
+                "description": "This product was a game changer and took over the market after release. It offers great picture and a beautiful frame for any taste. True-to-life picture quality - Experience breathtaking 4K Ultra HD picture quality with over 8 million pixels for stunning clarity, deep contrast and vivid colors.",
+                "qualityPoints": 0.5
+              },
+              {
+                "name": "TV2",
+                "title": "Brand 2",
+                "price": 487,
+                "image": "imagesShop/list1/TV/22.jpg",
+                "description": "If you are looking for a good big screen TV and don’t want to overspend, this is one to consider. Brand 2 made good quality TV available to a wide range of customers with this design. You can also connect your cable/satellite box or gaming console through one of the TV's three HDMI ports.",
+                "qualityPoints": 0.5
+              },
+              {
+                 "name": "TV3",
+                 "title": "Brand 3",
+                 "price": 700,
+                 "image": "imagesShop/list1/TV/23.jpg",
+                 "description": "Smart functionality delivers all your favorite content with over 500,000 movies and TV episodes. Brand 3 introduced this product for their high-end customers but the technology magazine described this product as “Overpriced”.",
+                 "qualityPoints": 0.5
+              },
+              {
+                  "name": "TV4",
+                  "title": "Brand 4",
+                  "price": 599,
+                  "image": "imagesShop/list1/TV/24.jpg",
+                  "description": "Brand 4 focuses on the customers who want to feel special. 720p HD resolution for a crisp picture. Stand Separation Distance - 21.3 inch. This TV comes in a limited edition, offers a great picture and there is only a few left in the stock.",
+                  "qualityPoints": 1
+              },
+              {
+                  "name": "TV5",
+                  "title": "Brand 5",
+                  "price": 460,
+                  "image": "imagesShop/list1/TV/25.jpg",
+                  "description": "A full high definition display paired with an advanced refresh rate, and dual-band Wifi allows you to capture every moment. Brilliant display, great quality and beautiful design, made this TV to one of the bestsellers of the market in 2019. A must have product for a great price.",
+                  "qualityPoints": 0.5
+              },
+              {
+                  "name": "TV6",
+                  "title": "Brand 6",
+                  "price": 617,
+                  "image": "imagesShop/list1/TV/26.jpg",
+                  "description": "Not only this TV has a great quality, but also as the result of the collaboration between Brand 6 and a famous interior designer, it comes with a unique and special TV stand, with gives it an authentic look in your living room.",
+                  "qualityPoints": 1
+              },
+              {
+                  "name": "TV7",
+                  "title": "Brand 7",
+                  "price": 545,
+                  "image": "imagesShop/list1/TV/27.jpg",
+                  "description": "This product did not satisfy the expectation and was considered one of the weaker innovations of Brand 7.  The remote has to be aimed just right at the sensor, meaning most of the time you have to press buttons more than once to get them to work. It was meant to be appealing to people with an eye for art but the picture did not satisfy the buyers.",
+                  "qualityPoints": 0
+              },
+              {
+                  "name": "TV8",
+                  "title": "Brand 8",
+                  "price": 480,
+                  "image": "imagesShop/list1/TV/28.jpg",
+                  "description": "#1 bestseller on amazon. This product is backed by a one-year manufacturer's warranty, and includes power cable and quick start guide. Brand 8 took a great portion of mainstream customers in 2018 with this design and to this day, it is considered a great TV for it’s price.",
+                  "qualityPoints": 0
+              }
+              
+                
+            ]
+          },
+          {
+          "name": "Table",
+          "type": "mandatory",
+          "products": [
+            {
+              "name": "Table1",
+              "title": "Brand 1",
+              "price": 220,
+              "image": "imagesShop/list1/Table/31.jpg",
+              "description": "One of the most successful designs of 2020 with astonishing quality which took over the market and influenced the market trend. This industrial style round metal accent table is a perfect complement to a variety of interior decor.",
+              "qualityPoints": 0.5
+            },
+            {
+              "name": "Table2",
+              "title": "Brand 2",
+              "price": 310,
+              "image": "imagesShop/list1/Table/32.jpg",
+              "description": "Brand 2 is known for it‘s unique designs and high-end products. They sell only to members and associate with high class customers. This product features a walnut wood-grained laminated top with flush-mounted T-molded edge design.",
+              "qualityPoints": 1
+            },
+            {
+               "name": "Table3",
+               "title": "Brand 3",
+               "price": 215,
+               "image": "imagesShop/list1/Table/33.jpg",
+               "description": "If you are looking for a good quality-price ratio, you might want to consider this table. Very popular product with mid-range pricing. With a glass top and metal base finished in classic matte Gold, this industrial side table will be a favorite piece for years to come.",
+               "qualityPoints": 0.5
+            },
+            {
+                "name": "Table4",
+                "title": "Brand 4",
+                "price": 265,
+                "image": "imagesShop/list1/Table/34.jpg",
+                "description":  "A new name in home design. Brand 4 has still room to improve when it comes to quality but they have been offering some promising designs. If they keep improving at this pace, they might become a serious name in the business in 10 years.",
+                "qualityPoints": 0
+            },
+            {
+                "name": "Table5",
+                "title": "Brand 5",
+                "price": 340,
+                "image": "imagesShop/list1/Table/35.jpg",
+                "description": "Suitable for a cosy and small living room. Brand 5 is a very big brand with lots of customers and a high range of creative design. The table is manufactured from high Quality durable composite wood. Simple Modern Style With Warm Feeling, It Is The First Choice For Urban Busy Young People.",
+                "qualityPoints": 0.5
+            },
+            {
+                "name": "Table6",
+                "title": "Brand 6",
+                "price": 303,
+                "image": "imagesShop/list1/Table/36.jpg",
+                "description": "Brand 6 is known for anticipating what their customers would ask for and offering it to them. They target the segmentation, which is interested in classic designs and come up with breathtaking products for them. Very high custpmer satisfaction.",
+                "qualityPoints": 1
+            },
+            {
+                "name": "Table7",
+                "title": "Brand 7",
+                "price": 400,
+                "image": "imagesShop/list1/Table/37.jpg",
+                "description": "This brand is known for their high price and big designs. They shoot for publicity and attention with their designs rather than gaining customers. Buying their products might be considered a waste of money, unless you are looking to buy special items and don't care about quality AT ALL!",
+                "qualityPoints": 0
+            },
+            {
+                "name": "Table8",
+                "title": "Brand 8",
+                "price": 283,
+                "image": "imagesShop/list1/Table/38.jpg",
+                "description": "Brand 8 has become very popular recently, offering a very broad range of high-quality products with economy prices. They are an Amazon Brand - They believe furniture should last, and style should be timeless. Committed to making the best furniture for the lowest prices that will look good year after year.",
+                "qualityPoints": 0.5
+            }
+            
+              
+          ]
+        },
+        {
+            "name": "Sofa",
+            "type": "mandatory",
+            "products": [
+              {
+                "name": "Sofa1",
+                "title": "Brand 1",
+                "price": 450,
+                "image": "imagesShop/list1/Sofa/11.jpg",
+                "description": "One of the most known names, when it comes to traditional design. This modern sofa has enough classic elements to blend with your existing style. Plus, clean lines, comfortable seating and durable fabric give this piece functionality as well as smart design. A very classy sofa from a famous designer.",
+                "qualityPoints": 1
+              },
+              {
+                "name": "Sofa2",
+                "title": "Brand 2",
+                "price": 273,
+                "image": "imagesShop/list1/Sofa/12.jpg",
+                "description": "A very modern design, which comes is various colours. The sofa does not offer a great quality but the brand sells over 1 Milion sofas a year because of the cheap prices. Machine washable, wash at temperature around 30 degrees Celsius, mild laundey detergents are advised, please do not bleach.",
+                "qualityPoints": 0
+              },
+              {
+                 "name": "Sofa3",
+                 "title": "Brand 3",
+                 "price": 340,
+                 "image": "imagesShop/list1/Sofa/13.jpg",
+                 "description": "#1 Bestseller on amazon. A very popular product with marvelous features. Suitable for big living rooms. Available in many colours. Elegant quilted texture, thick microfiber, colorfast.Water resistant,Two color options. Double the use.",
+                 "qualityPoints": 0.5
+              },
+              {
+                  "name": "Sofa4",
+                  "title": "Brand 4",
+                  "price": 379,
+                  "image": "imagesShop/list1/Sofa/14.jpg",
+                  "description": "A Mid-Range priced sofa with decent quality. This sleek, Mid-century inspired velvet sofa is designed to impress. A long fixed bench seat cushion, two back cushions, tapered wood legs, and smooth bolster pillows. This product was produced for 50th anniversary of Brand 4 as “Limited Edition”.",
+                  "qualityPoints": 1
+              },
+              {
+                  "name": "Sofa5",
+                  "title": "Brand 5",
+                  "price": 400,
+                  "image": "imagesShop/list1/sofa/15.jpg",
+                  "description": "This product is referred to as the „Brand 5 Masterpiece“ and was on the cover of multiple magazines. The Sofa shook the market the year it came out. It includes a furniture protector feature, which protects your furniture from daily wear and tear, spills and stains.",
+                  "qualityPoints": 0.5
+              },
+              {
+                  "name": "Sofa6",
+                  "title": "Brand 6",
+                  "price": 477,
+                  "image": "imagesShop/list1/Sofa/16.jpg",
+                  "description": "Machine washable, wash at temperature around 30 degrees Celsius, mild laundey detergents are advised. A High-End brand in the sofa industry with over 100 years of experience in the field. When it comes to customer satisfaction, Brand 6 is always mentioned.",
+                  "qualityPoints": 0.5
+              },
+              {
+                  "name": "Sofa7",
+                  "title": "Brand 7",
+                  "price": 443,
+                  "image": "imagesShop/list1/Sofa/17.jpg",
+                  "description": "Brand 7 is known for making High-End to Mid-Range priced sofas with various designs. The quality definitaly matches the price you pay. It has a minimalist look that pairs well with most decor styles. The solid wood frame and leather upholstery make this sofa feel sturdy and substantial.",
+                  "qualityPoints": 0.5
+              },
+              {
+                  "name": "Sofa8",
+                  "title": "Brand 8",
+                  "price": 319,
+                  "image": "imagesShop/list1/sofa/18.jpg",
+                  "description": "Brand 8 entered the market in 2019 and sold over 100.000 pieces of this very design. However the customers did not report a good feedback and they lost their market share very fast. Neutral chocolate-colored upholstery allows this piece to blend into your existing color scheme with ease.",
+                  "qualityPoints": 0
+              }
+              
+                
+            ]
+          },
+          {
+            "name": "Lamp",
+            "type": "mandatory",
+            "products": [
+              {
+                "name": "Lamp1",
+                "title": "Brand 1",
+                "price": 64,
+                "image": "imagesShop/list1/Lamp/41.jpg",
+                "description": "A trustable known name in the lighting industry. This fun and fashionable lamp features a brushed steel base and a fabric shade, which gives it a magnificent look. Brand 1 has a huge customer base and the products never fail to meet customers standards.",
+                "qualityPoints": 0.5
+              },
+              {
+                "name": "Lamp2",
+                "title": "Brand 2",
+                "price": 89,
+                "image": "imagesShop/list1/Lamp/42.jpg",
+                "description": "A collective brand, which works with talented artist, who don’t have big connections. Brand 2 offers them to be creative and sell their unique art pieces to customers who like having collectible items. This lamp will add a fabulous flair to any room. Perfect for any room you could imagine.",
+                "qualityPoints": 1
+              },
+              {
+                 "name": "Lamp3",
+                 "title": "Brand 3",
+                 "price": 96,
+                 "image": "imagesShop/list1/Lamp/43.jpg",
+                 "description": "With the remote control, you can easily control the floor lamp without leaving the sofa and warm bed. If you like old fashioned designs, Brand 3 is the one for you. They like creating antique designs, which give your room a sophisticated look.",
+                 "qualityPoints": 1
+              },
+              {
+                  "name": "Lamp4",
+                  "title": "Brand 4",
+                  "price": 88,
+                  "image": "imagesShop/list1/Lamp/44.jpg",
+                  "description": "Brand 4 has received negative reviews recently due to a decrease in their quality. After the shift in management they failed to live up the standards, that their customers always expected from them. Many of the feedbacks shared the same problem: Lighting is unpleasant to the eye.",
+                  "qualityPoints": 0
+              },
+              {
+                  "name": "Lamp5",
+                  "title": "Brand 5", 
+                  "price": 101,
+                  "image": "imagesShop/list1/Lamp/45.jpg",
+                  "description": "Brand 5 is a reliable brand that always comes up with fancy designs, which give the room a very rich look. The lamps are mass produced and have 10 years of warranty. This lamp also has 3 different color adjustable temperature settings.",
+                  "qualityPoints": 0.5
+              },
+              {
+                  "name": "Lamp6",
+                  "title": "Brand 6",
+                  "price": 70,
+                  "image": "imagesShop/list1/Lamp/46.jpg",
+                  "description": "Brand 6 is a new name in the market. They don’t have a big customer base and time will evaluate the quality of their products. Fully adjustable reading/task light that can be used independent of the main floor lamp. No information available regarding the quality.",
+                  "qualityPoints": 0
+              },
+              {
+                "name": "Lamp7",
+                "title": "Brand 7",
+                "price": 99,
+                "image": "imagesShop/list1/Lamp/47.jpg",
+                "description": "If you are looking for a smart design but don’t have high expectations for the quality, then you might wanna consider Brand 7. A low-priced brand. 3-Way Switch allows you to set the mood with low, medium or high settings.",
+                "qualityPoints": 0.5
+            },
+              {
+                  "name": "Lamp8",
+                  "title": "Brand 8",
+                  "price": 68,
+                  "image": "imagesShop/list1/Lamp/48.jpg",
+                  "description": "Soft, stable and flicker-free, the lighting protects your eyes so you can enjoy what you’re doing for longer. This lamp was one of the most successful products of Brand 8, making the company millions of euros worth of profit just by selling copies of this design.",
+                  "qualityPoints": 0.5
+              }
+              
+                
+            ]
+          },
+          {
+            "name": "Clock",
+            "type": "optional",
+            "products": [
+              {
+                "name": "Clock1",
+                "title": "Brand 1",
+                "price": 33,
+                "image": "imagesShop/list1/Clock/51.jpg",
+                "description": "The product is actually in offer and the price is reduced for a limited time. The large numbers are clear to read and the front glass cover guarantees crystal - clear view. A weak product from a know brand in the industry. They seem to have failed the customers this time regarding the life time of this clock.",
+                "qualityPoints": 0
+              },
+              {
+                "name": "Clock2",
+                "title": "Brand 2",
+                "price": 37,
+                "image": "imagesShop/list1/Clock/52.jpg",
+                "description": "One of the most popular designs of 2020. Precise quartz sweep movement guarantees accurate time and absolutely silent environment. This clock is of high quality and made lots of profit for the company, as they sold over one milion pieces of this design.",
+                "qualityPoints": 0
+              },
+              {
+                 "name": "Clock3",
+                 "title": "Brand 3",
+                 "price": 24,
+                 "image": "imagesShop/list1/Clock/53.jpg",
+                 "description": "stylish modern cement grey dial with large 3D white numbers.This functional art is as beautiful as it is practical. White frame is made of high-quality ABS. A very well structured clock with long life-time. Very good price-quality ratio.",
+                 "qualityPoints": 0
+              },
+              {
+                  "name": "Clock4",
+                  "title": "Brand 4",
+                  "price": 59,
+                  "image": "imagesShop/list1/Clock/54.jpg",
+                  "description": "Brand 4 had a huge success aftre releasing this design because the response from customers was above expectation. High quality silent quartz movement, keeps accurate time. Being non-ticking, it is perfect for bedroom, living room, computer room, coffee shop, office, conference room. Free shipping included.",
+                  "qualityPoints": 0
+              },
+              {
+                  "name": "Clock5",
+                  "title": "Brand 5",
+                  "price": 63,
+                  "image": "imagesShop/list1/Clock/55.jpg",
+                  "description": "Simple style design, large and clear black bold numbers display on white face can be easily watched. Durable package ensure our clock in a good condition during shipment. Another beatiful design by Brand 5. Quality, beauty and trust, all gathered in this magnificent product.",
+                  "qualityPoints": 0
+              },
+              {
+                  "name": "Clock6",
+                  "title": "Brand 6",
+                  "price": 82,
+                  "image": "imagesShop/list1/Clock/56.jpg",
+                  "description": "If price is not a problem, then you might want to consider the newest design from Brand 6. This modern clock is being marketed broadly and is setting the new trend. The clock is made of high quality material which is smooth to touch. The clock is simple enough, so it is not easy to break.",
+                  "qualityPoints": 0
+              },
+              {
+                  "name": "Clock7",
+                  "title": "Brand 7",
+                  "price": 69,
+                  "image": "imagesShop/list1/Clock/57.jpg",
+                  "description": "A very beatiful and detailed design plus long life-time, if you are looking for these qualities, then Brand 7 is the one for you. Suitable for people who want to stand out and be different. Quiet sweep second hand, no ticking to ensure a good sleeping or working environment.",
+                  "qualityPoints": 0.5
+              },
+              {
+                  "name": "Clock8",
+                  "title": "Brand 8",
+                  "price": 29,
+                  "image": "imagesShop/list1/Clock/58.jpg",
+                  "description": "An amazon product for people, who want a decent functioning clock with an average quality for a reasonable price. This clock has a 3 star rating on amazon, with lot of unsatisfied customers complaining about the quality and the life time.",
+                  "qualityPoints": -0.5
+              }
+              
+                
+            ]
+          },
+          {
+            "name": "Chair",
+            "type": "optional",
+            "products": [
+              {
+                "name": "Chair1",
+                "title": "Brand 1",
+                "price": 140,
+                "image": "imagesShop/list1/Chair/61.jpg",
+                "description": "This rocking chair’s solid wood frame and legs create a stable structure, and their natural finish complements light-gray cushions. Brand 1 is a mid-range priced furniture producer. They are not known for their great quality but their amazing prices are appealing to lots of customers.",
+                "qualityPoints": 0
+              },
+              {
+                "name": "Chair2",
+                "title": "Brand 2",
+                "price": 115,
+                "image": "imagesShop/list1/Chair/62.jpg",
+                "description": "“COMFTY!” is the first word that comes to mind of everyone who actually tries this chair out. The tight, fixed back and removable and reversible cushions ensure durability and comfort. A great offer for a great price. Bestseller in Europe.",
+                "qualityPoints": 0
+              },
+              {
+                 "name": "Chair3",
+                 "title": "Brand 3",
+                 "price": 190,
+                 "image": "imagesShop/list1/Chair/63.jpg",
+                 "description": " Plush arms, back & ottoman top are soft & designed for premium comfort. This model comes with a free footstool. Brand 3 has already sold more that ten thousand copies of this model and the customers don’t seem to be getting enough of it.",
+                 "qualityPoints": 0
+              },
+              {
+                  "name": "Chair4",
+                  "title": "Brand 4",
+                  "price": 142,
+                  "image": "imagesShop/list1/Chair/64.jpg",
+                  "description": "This rocking chair is designed for durability. Each back, and each of the rockers is hand carved. Each piece of the rocking chair is crafted from natural wood. A very comfortable chair, suitable for your porch, garden or even the living room. This product even comes in multiple colors for different tastes.",
+                  "qualityPoints": 0
+              },
+              {
+                  "name": "Chair5",
+                  "title": "Brand 5",
+                  "price": 123,
+                  "image": "imagesShop/list1/Chair/65.jpg",
+                  "description": "The design has been criticized by many customers, for it doesn’t make them feel like they are sitting on a rocking chair. 100% polyester Frame material: Birch color Available in: grey, muted blue, muted green, muted orange, or wheat frame finish. A poor product by Brand 5.",
+                  "qualityPoints": -0.5
+              },
+              {
+                  "name": "Chair6",
+                  "title": "Brand 6",
+                  "price": 141,
+                  "image": "imagesShop/list1/Chair/66.jpg",
+                  "description": "Who is not familiar with Brand 6? The name is known all over the world, the products are reliable, the service is outstanding, the designs are efficient and prices are fair. A go to option for every customer, who wants top quality for low prices.",
+                  "qualityPoints": 0
+              },
+              {
+                  "name": "Chair7",
+                  "title": "Brand 7",
+                  "price": 157,
+                  "image": "imagesShop/list1/Chair/67.jpg",
+                  "description": "This rocker is just the chair to complete your cosy living room. Built tall and wide. Brand 7 is known for it’s elegant design and outstanding products. Their products are handmade and promise amazing quality and the customers always feel satisfied with their purchase.",
+                  "qualityPoints": 0.5
+              },
+              {
+                  "name": "Chair8",
+                  "title": "Brand 8",
+                  "price": 199,
+                  "image": "imagesShop/list1/Chair/68.jpg",
+                  "description": "This rocking chair is a great addition to any room in your home, especially a Bedroom or nursery. The leather used for this chair is of a very high quality and that is the reason for the high price. Other than that it is a very ordinary rocking chair.",
+                  "qualityPoints": 0
+              }
+              
+                
+            ]
+          },
+          {
+            "name": "Vase",
+            "type": "optional",
+            "products": [
+              {
+                "name": "Vase1",
+                "title": "Brand 1",
+                "price": 14,
+                "image": "imagesShop/list1/Vase/1.jpg",
+                "description": "Enjoy brightening your home with dried flowers or display it alone. Either way, this vase will bring a modern elegance into any home. Brand 1 is a home appliance brand, which was established in 1970 and has a long history of satisfied customer. One of the big market players in Germany.",
+                "qualityPoints": 0
+              },
+              {
+                "name": "Vase2",
+                "title": "Brand 2",
+                "price": 9,
+                "image": "imagesShop/list1/Vase/2.jpg",
+                "description": "This Vase is oriented on a simplistic design and is focused on taking care of what customers need. Handcraft with Minimalist Design - Modern and clean design with snow white glazed finishing. It has an average quality, but for it’s cheep price it is a very decent vase.",
+                "qualityPoints": 0
+              },
+              {
+                 "name": "Vase3",
+                 "title": "Brand 3",
+                 "price": 19,
+                 "image": "imagesShop/list1/Vase/3.jpg",
+                 "description": "This contemporary narrow-necked vase with a grooved texture has a blue reactive glaze over a sand-colored base, making each piece fabulous. Brand 3 has a wide range of luxurious products for designing your home. The pricing is rather suited for high-end customers who don’t have a problem paying more for quality.",
+                 "qualityPoints": 0.5
+              },
+              {
+                  "name": "Vase4",
+                  "title": "Brand 4",
+                  "price": 12,
+                  "image": "imagesShop/list1/Vase/4.jpg",
+                  "description": "It is ideal for both fresh bouquets, greenery silk flowers, or floral arrangement. Suitable for home décor, kitchen, bathroom, office, wedding centerpiece. This beautiful vase featured number one on amazon just a week after it came out. Very high customer satisfaction and a great price",
+                  "qualityPoints": 0
+              },
+              {
+                  "name": "Vase5",
+                  "title": "Brand 5",
+                  "price": 17,
+                  "image": "imagesShop/list1/Vase/5.jpg",
+                  "description": "A lovely vase for your living room. No matter if you want to use it for flowers, plant vegetables or even fill it with some colorful liquid, it will end up brightening your room. This vase are made from advanced pottery clay, and manufactured though an appropriate synergy between traditional handmade technologies and ergonomics",
+                  "qualityPoints": 0
+              },
+              {
+                  "name": "Vase6",
+                  "title": "Brand 6",
+                  "price": 14,
+                  "image": "imagesShop/list1/Vase/6.jpg",
+                  "description": "A simple all-rounder for any kind of plants. The vase is rather huge and is can fit the most amount of plants / flowers in it. The product does not have great quality. Fit for office or home décor, the items also are able to be popular in wedding planning, artificial flower arranging and ...",
+                  "qualityPoints": -0.5
+              },
+              {
+                  "name": "Vase7",
+                  "title": "Brand 7",
+                  "price": 23,
+                  "image": "imagesShop/list1/Vase/7.jpg",
+                  "description": "The vase might be on the more expensive range of pricing, but it has a beautiful design and sold more than 100.000 copies on ebay. Very elegant and practical design. Coming with Exquisite Gift Box and carefully wrapped in multiple layers of bubble wrap.",
+                  "qualityPoints": 0
+              },
+              {
+                  "name": "Vase8",
+                  "title": "Brand 8",
+                  "price": 18,
+                  "image": "imagesShop/list1/Vase/8.jpg",
+                  "description": "Brand 8 was under fire after introducing this vase for disappointing their loyal customers. It is not like them to introduce such a poor product to the market. However if the glass breaks during the delivery, they promise to make it right with a replacement, no questions asked.",
+                  "qualityPoints": 0
+              }
+              
+                
+            ]
+          },
+          {
+            "name": "Mirror",
+            "type": "optional",
+            "products": [
+              {
+                "name": "Mirror1",
+                "title": "Brand 1",
+                "price": 63,
+                "image": "imagesShop/list1/Mirror/71.jpg",
+                "description": "A very normal mirror, which you could find almost in every shop. Ideal for entryways, living rooms, bedrooms, bathrooms, and more. Sleek, modern design that fits in with a wide variety of interiors. Very good quality-price ratio and long lifetime.",
+                "qualityPoints": 0
+              },
+              {
+                "name": "Mirror2",
+                "title": "Brand 2",
+                "price": 40,
+                "image": "imagesShop/list1/Mirror/72.jpg",
+                "description": "High-end quality optical glass, allow you to see every detail of your whole face or outfit, so you can get the best picture possible.An Amazon recommended product. Very high quality for a low price. Thousands of positive reviews and a reasonable price.",
+                "qualityPoints": 0
+              },
+              {
+                 "name": "Mirror3",
+                 "title": "Brand 3",
+                 "price": 49,
+                 "image": "imagesShop/list1/Mirror/73.jpg",
+                 "description": "Pull together the room and experience a clear, clean reflection with the Brand 3 Wall Mirror. Brand 3 aims at giving customers what they want. Every product is quality controled and they have a 1 month return policy without asking you any questions.",
+                 "qualityPoints": 0
+              },
+              {
+                  "name": "Mirror4",
+                  "title": "Brand 4",
+                  "price": 93,
+                  "image": "imagesShop/list1/Mirror/74.jpg",
+                  "description": "This product is more on the overpriced range of the mirror market. Brand 4 offers a poor quality and has been criticized before for their high prices. Featuring a nice frame that adds a level of depth to the mirror, you can choose what finish works best with your interior.",
+                  "qualityPoints": -0.5
+              },
+              {
+                  "name": "Mirror5",
+                  "title": "Brand 5",
+                  "price": 59,
+                  "image": "imagesShop/list1/Mirror/75.jpg",
+                  "description": "Strong, solid feel with metal frame and base, built to withstand heavy use. Gorgeous and superior reflective mirror built to last with top quality material. Brand 5 is a long time player in the industry and has conquered the highest market share in the market, offering products with decent quality.",
+                  "qualityPoints": 0
+              },
+              {
+                  "name": "Mirror6",
+                  "title": "Brand 6",
+                  "price": 66,
+                  "image": "imagesShop/list1/Mirror/76.jpg",
+                  "description": "The full body mirror is ideal for bathroom mirror, bedroom mirror, living room mirror. The modern design fits in a wide variety of interiors. The customers are either amazed by the product or very disappointed. It seems like Brand 6 always fails to keep a stable production method and has lots of alternation in their quality.",
+                  "qualityPoints": 0
+              },
+              {
+                  "name": "Mirror7",
+                  "title": "Brand 7",
+                  "price": 51,
+                  "image": "imagesShop/list1/Mirror/77.jpg",
+                  "description": "Brand 7 entered the mirror market two years ago and is not doing bad for a newcomer. Nevertheless this mirror does not offer a promising quality. Innovative z-bar mounting bracket is pre-installed onto the back of the mirror. Simply secure the corresponding mounting bracket to your wall and drop the mirror into place.",
+                  "qualityPoints": 0
+              },
+              {
+                  "name": "Mirror8",
+                  "title": "Brand 8",
+                  "price": 85,
+                  "image": "imagesShop/list1/Mirror/78.jpg",
+                  "description": "Super easy to install! A full body mirror with a good reputation. Brand 8 is a high-end brand, that quality designs for that limited number of customers, who are looking for something more in exchange for a higher price. With 50+ years of mirror manufacturing expertise, they stand by the quality of their products.",
+                  "qualityPoints": 0.5
+              }
+              
+                
+            ]
+        }
+    
+    ]
+]    

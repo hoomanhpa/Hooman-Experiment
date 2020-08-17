@@ -1,0 +1,88 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+
+{% block title %}
+    
+{% endblock %}
+
+{% block content %}
+
+   {{ form.errors }}
+    
+      
+    
+    <body onload="hideDebug()">
+
+        <nav class="navbar fixed-top navbar-light bg-light">
+            <span id="productname" class="navbar-brand" href="#">Please choose from the scale of 1 to 5, which picture describes how you were feeling during the experiment the best. </span>
+            <a class="my-2 my-lg-0">
+                <!-- Button trigger modal -->
+                <button id="skipButton" type="button" class="btn btn-success" 
+                    onclick="next()">
+                    Next
+                </button>
+            </a>
+        </nav>
+
+        <div style="height: 200px; padding-top: 60px;">
+            <img style="margin-left:5%;" src="{% static '/imagesShop/SAM/SAMArousal.png' %}"/>
+        </div>
+    
+        <div style="margin-left: 25%;">
+            
+            <tr>
+                {% for choice in form.arousal %}
+                    <td>{{ choice }}</td>
+                    <span style="margin-left: 118px;"></span>
+                {% endfor %}
+            </tr>
+        </div>
+       
+        
+        <img style="margin-left:5%; margin-top: 60px;" src="{% static '/imagesShop/SAM/SAMPleasure.png' %}"/>
+    
+        <div style="margin-left: 25%;">
+            
+            <tr>
+                {% for choice in form.pleasure %}
+                    <td>{{ choice }}</td>
+                    <span style="margin-left: 118px;"></span>
+                {% endfor %}
+            </tr>
+        </div>
+
+
+        <img style="margin-left:5%; margin-top: 60px;" src="{% static '/imagesShop/SAM/SAMDominance.png' %}"/>
+    
+        <div style="margin-left: 25%;">
+            
+            <tr>
+                {% for choice in form.dominance %}
+                    <td>{{ choice }}</td>
+                    <span style="margin-left: 118px;"></span>
+                {% endfor %}
+            </tr>
+        </div>
+    </body>
+    
+
+    <div style="visibility: hidden;">{% next_button %}</div>
+
+    <script>
+        function hideDebug() {
+            document.getElementsByClassName("debug-info")[0].style.visibility = "hidden";
+        } 
+
+        function next() {
+            document.querySelector("button[class='otree-btn-next btn btn-primary']").click();
+        }
+           
+    </script>
+
+{% endblock %}
+
+
+
+
+
+

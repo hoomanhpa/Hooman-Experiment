@@ -1,0 +1,59 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+
+{% block title %}
+    
+{% endblock %}
+
+{% block content %}
+
+   {{ form.errors }}
+    
+      
+    
+    <body onload="hideDebug()">
+
+        <nav class="navbar fixed-top navbar-light bg-light">
+            <span id="productname" class="navbar-brand" href="#">Thank you for participating. </span>
+            <a class="my-2 my-lg-0">
+                <!-- Button trigger modal -->
+                <button id="skipButton" type="button" class="btn btn-success" 
+                    onclick="next()">
+                    Next
+                </button>
+            </a>
+        </nav>
+        <br>
+        <br>
+        <br>
+        <br>
+        <h4>Your final payment is:</h4>
+        <p id="final_payment"></p>
+        <h4>Thank you for your ....</h4>
+
+       
+        
+    </body>
+    
+
+    <div style="visibility: hidden;">{% next_button %}</div>
+
+    <script>
+        function hideDebug() {
+            document.getElementsByClassName("debug-info")[0].style.visibility = "hidden";
+            document.getElementById("final_payment").innerHTML = js_vars.payment_final;
+        } 
+
+        function next() {
+            document.querySelector("button[class='otree-btn-next btn btn-primary']").click();
+        }
+           
+    </script>
+
+{% endblock %}
+
+
+
+
+
+

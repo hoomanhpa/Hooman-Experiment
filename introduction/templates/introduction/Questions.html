@@ -1,0 +1,136 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+
+{% block title %}
+    Understanding Questions
+{% endblock %}
+
+{% block content %}
+<body onload="pageLoading()">
+    <br>
+    Please answer the following questions, to make sure, that you have understood the principle of the experiment. Understanding the situation will help you get a better payment in the experiment.
+    If you provide a wrong answer, the correct answer will be shown automaticaly.
+<br>
+<br>
+
+   
+    <!-- formfields -->
+    <div>
+        <ul>
+            <li><b>The client wants to own special items. Price and quality are the next priorities for him.</b>
+                <ul>
+                    <li><input id="radio_correct1" type="radio" name="firstquestion" onclick="correct('1')">True</li>
+                    <li><input id="radio_answer1" type="radio" name="firstquestion" onclick="showCorrectAnswer('1')">False</li>
+                    <li id="answer1" style="display:none; color: red;">Your answer is wrong. He is interested in owning items, that match his criteria and he also cares about price and quality.</li>
+                    <li id="correct1" style="display:none; color: green;">That is the correct answer.</li>
+                </ul>
+            </li>
+            <br>
+            <li><b>There are 4 products on the shopping list. Those producst have to be purchased.</b>
+                <ul>
+                    <li><input id="radio_answer2" type="radio" name="secondquestion" onclick="correct('2')">True</li>
+                    <li><input id="radio_correct2" type="radio" name="secondquestion"  onclick="showCorrectAnswer('2')">False</li>
+                    <li id="answer2" style="display: none; color: red;">Your answer is wrong. TV, Lamp, Table and Sofa are on the shopping list and they have to be purchased. The rest of the products are optional.</li>
+                    <li id="correct2" style="display:none; color: green;">That is the correct answer.</li>
+                </ul>
+            </li>
+            <br>
+            <li><b>Products with higher prices will definitely result in higher payout for you.</b>
+                <ul>
+                    <li><input id="radio_answer3" type="radio" name="thirdquestion" onclick="showCorrectAnswer('3')">True</li>
+                    <li><input id="radio_correct3" type="radio" name="thirdquestion" onclick="correct('3')">False</li>
+                    <li id="answer3" style="display: none; color: red;">Your answer is wrong. The customer cares also about the quality and the items being unique in the way that he desires.</li>
+                    <li id="correct3" style="display:none; color: green;">That is the correct answer.</li>
+                </ul>
+            </li>
+            <br>
+            <li><b>If you buy all of the products, you will definitely receive a higher payment.</b>
+                <ul>
+                    <li><input id="radio_answer4" type="radio" name="fourthquestion" onclick="showCorrectAnswer('4')">True</li>
+                    <li><input id="radio_correct4" type="radio" name="fourthquestion" onclick="correct('4')">False</li>
+                    <li id="answer4" style="display:none; color: red;">Your answer is wrong. The products, that are not on the shopping list, might result in negative payments. So if you don't know which one to choose from, skipping the page could maximize your payment.</li>
+                    <li id="correct4" style="display:none; color: green;">That is the correct answer.</li>
+                </ul>
+            </li>
+            <br>
+            <li><b>The first four pages represent products, that are on the shopping list. The next four pages show items that are not on the shopping list and could be skipped.</b>
+                <ul>
+                    <li><input id="radio_correct5" type="radio" name="fifthquestion" onclick="correct('5')">True</li>
+                    <li><input id="radio_answer5" type="radio" name="fifthquestion" onclick="showCorrectAnswer('5')">False</li>
+                    <li id="answer5" style="display:none; color: red;">Your answer is wrong. The first 4 products are on the shopping list and have to be purchased. The four items, that come after that, are optional.</li>
+                    <li id="correct5" style="display:none; color: green;">That is the correct answer.</li>
+                </ul>
+            </li>
+            <br>
+        </ul>
+
+       
+        
+
+    </div>
+    
+    <div>
+        <input type="hidden" name="question1" id="question1" value=""/>
+        <input type="hidden" name="question2" id="question2" value=""/>
+        <input type="hidden" name="question3" id="question3" value=""/>
+        <input type="hidden" name="question4" id="question4" value=""/>
+        <input type="hidden" name="question5" id="question5" value=""/>
+    </div>
+
+    
+
+    <br>
+    <button id="nextButton" class="btn btn-success" 
+                onclick="clickNext()">
+                <p class=" my-2 my-sm-0">
+                    Start Experiment
+                </p>
+    </button>
+    <div style="visibility: hidden;">
+        {% next_button %}
+    </div>
+
+</body>
+    <script>
+        function clickNext() {
+            document.querySelector("button[class='otree-btn-next btn btn-primary']").click();
+        }
+
+        function pageLoading() {
+            //document.getElementsByClassName("debug-info")[0].style.visibility = "hidden";
+        }
+
+        function showCorrectAnswer(i) {
+            var answerId = "answer" + i;
+            document.getElementById(answerId).style.display = "";
+            var field = "question" + i;
+            document.getElementById(field).value = "Falsch";
+            var disable = "radio_correct" + i;
+            document.getElementById(disable).disabled = true;
+        }
+
+        function correct(i){
+            var correctId = "correct" + i;
+            document.getElementById(correctId).style.display = "";
+            var field = "question" + i;
+            document.getElementById(field).value = "Richtig";
+            var disable = "radio_answer" + i;
+            document.getElementById(disable).disabled = true;
+        }
+
+    </script>
+    <style>
+      ul {
+          list-style-type: none;
+      }
+
+      input {
+          margin-left: 10px;
+      }
+
+      
+
+    </style>
+{% endblock %}
+
+
